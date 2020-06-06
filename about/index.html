@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Generated from the 11ty Netlify Jumpstart: https://github.com/5t3ph/11ty-netlify-jumpstart -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>About | The Bubbleworks</title>
+    <meta
+      name="description"
+      content="Review feature info and customization details."
+    />
+    <link rel="icon" href="/favicon.png" />
+    <link href="/css/style.css" rel="stylesheet" />
+    <meta name="twitter:card" content="summary_large_image" />
+    
+    <meta name="twitter:creator" content="@The_Bubbleworks" />
+    
+    <meta
+      name="twitter:title"
+      content="About"
+    />
+    <meta
+      name="twitter:description"
+      content="Review feature info and customization details."
+    />
+
+    <meta
+      name="og:title"
+      content="About"
+    />
+    <meta
+      name="og:description"
+      content="Review feature info and customization details."
+    />
+    <meta property="og:image" content="/previews/about.png" />
+    <meta name="twitter:image" content="/previews/about.png" />
+
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="RSS Feed for The Bubbleworks"
+      href="/feed/"
+    />
+  </head>
+  <body>
+    <nav aria-labelledby="siteid" class="tdbc-sitenav">
+  <div class="tdbc-sitenav__container">
+    <a id="tdbc-siteid" href="/">The Bubbleworks</a>
+    <ul class="tdbc-sitenav__navlist tdbc-list-unstyled"><li>
+        <a href="/about/">About</a>
+      </li><li>
+        <a href="/helloworld/">Hello World</a>
+      </li></ul>
+  </div>
+</nav>
+
+
+<header class="tdbc-hero">
+  <div class="tdbc-container">
+    <h1 class="tdbc-ink--primary tdbc-mb-none">About</h1>
+    <h2 class="tdbc-lead tdbc-content-maxlength tdbc-ink--gray tdbc-mt-md tdbc-mx-auto">
+      Review feature info and customization details.
+    </h2>
+  </div>
+</header>
+<main class="tdbc-container">
+  <article class="tdbc-mx-auto">
+    <h2 id="intro-to-jumpstart">Intro to Jumpstart<a class="tdbc-anchor" href="#intro-to-jumpstart">#</a></h2>
+<p>This jumpstart is intended to be <em>just enough</em> to be a functional site/blog using 11ty, and also to introduce essential 11ty features.</p>
+<p><a href="/#quickstart"><strong>Review the &quot;Quick Start&quot;</strong></a> on the home page for how to get this starter up and running for your project.</p>
+<h3 id="colophon">Colophon<a class="tdbc-anchor" href="#colophon">#</a></h3>
+<p>Hi, I'm Stephanie Eckles - @5t3ph on <a href="https://twitter.com/5t3ph">Twitter</a>, <a href="https://github.com/5t3ph">Github</a>, <a href="https://codepen.com/5t3ph">CodePen</a>, and <a href="https://dev.to/5t3ph">DEV</a>. You may know me as the author of <a href="https://moderncss.dev">ModernCSS.dev</a>. I can also be found on <a href="https://egghead.io/instructors/stephanie-eckles">egghead as an instructor</a>.</p>
+<p>I spent a decade creating WordPress themes and plugins then flipped to product development + leading development of a multi-platform enterprise design system. My intro to JAMstack was with Gatsby, but 11ty fills a special place that is so needed for truly static sites. I'm in love, and I think you will be, too.</p>
+<h3 id="jump-to">Jump to:<a class="tdbc-anchor" href="#jump-to">#</a></h3>
+<ul>
+<li><a href="#global-site-data-and-env">Global Site Data and .env</a></li>
+<li><a href="#template-languages-used">Template Languages Used</a></li>
+<li><a href="#layout-hierarchy-and-features">Layout Hierarchy and Features</a></li>
+<li><a href="#expected-frontmatter">Expected Frontmatter</a></li>
+<li><a href="#permalink-style">Permalink Style</a></li>
+<li><a href="#asset-handling">Asset Handling</a></li>
+<li><a href="#linting">Linting</a></li>
+<li><a href="#sass-framework">Sass Framework</a></li>
+<li><a href="#anchor-links">Anchor links</a></li>
+<li><a href="#sitemap">Sitemap</a></li>
+<li><a href="#rss-feed">RSS Feed</a></li>
+<li><a href="#social-share-preview-images">Social Share Preview Images</a></li>
+<li><a href="#prism-syntax-highlighting">Prism Syntax Highlighting</a></li>
+<li><a href="#eleventyjs-config-features">.eleventy.js Config Features</a></li>
+<li><a href="#vscode-tips">VSCode Tips</a></li>
+</ul>
+<h2 id="global-site-data-and-env">Global Site Data and .env<a class="tdbc-anchor" href="#global-site-data-and-env">#</a></h2>
+<p>As noted in the <a href="/#quickstart">Quick Start</a>, there are global site data variables in <code>src/_data/meta.json</code>.</p>
+<p>Those include:</p>
+<ul>
+<li><code>url</code> - should remain unchanged, reads from the single expected <code>.env</code> value of <code>URL</code></li>
+<li><code>siteName</code> - your &quot;brand&quot; if you will, appended to the <code>&lt;title&gt;</code> tag, shown in the <code>sitenav</code>, displayed in the &quot;hero&quot; for the <code>home</code> layout, in the footer by the copyright, as the &quot;credit&quot; for social share images, and as the identifier throughout the RSS feed</li>
+<li><code>siteDescription</code> - used in the &quot;description&quot; meta tag, and below the <code>siteName</code> on the <code>home</code> layout</li>
+<li><code>authorName</code> - Used in the RSS feed, intended to be your full name</li>
+<li><code>twitterUsername</code> - without the &quot;@&quot;, this value is used for the Twitter meta tags, and for the URL of the icon link in the footer</li>
+</ul>
+<h3 id="env">.env<a class="tdbc-anchor" href="#env">#</a></h3>
+<p>See <code>.env-sample</code> for the single expected value of <code>URL</code> which should be set to your localhost. The sample uses the default 11ty port, so you can simply rename the file to <code>.env</code> if you haven't changed the port.</p>
+<p>The <code>URL</code> value is then available via the global data described previously, and can be used in templates with <code>meta.url</code>. You can see this used for the RSS feed and sitemap as well as meta tag links to the social share preview images to create the absolute URLs.</p>
+<h2 id="template-languages-used">Template Languages Used<a class="tdbc-anchor" href="#template-languages-used">#</a></h2>
+<p>Page templates are created as Nunjuck (.njk), and feature are added that expect Markdown for most page content.</p>
+<p>The home page - <code>_includes/home.njk</code> - is set to process first as Markdown followed by Nunjuck. This allows mixing HTML with Markdown, with benefits being code syntax highlighting and ability to include classes on HTML elements. This functionality is provided by the <code>templateEngineOverride: md, njk</code> in the frontmatter.</p>
+<p>A unique case uses Nunjuck to create the <code>json</code> that is used to generate the <a href="#social-share-preview-images">social share preview images</a>.</p>
+<p>Review the list of <a href="https://www.11ty.dev/docs/languages/">available templating languages</a> in the 11ty docs.</p>
+<h2 id="layout-hierarchy-and-features">Layout Hierarchy and Features<a class="tdbc-anchor" href="#layout-hierarchy-and-features">#</a></h2>
+<p>There are two layouts + a base for those, and one partial included.</p>
+<p>The <code>base.njk</code> layout receives both the <code>home.njk</code> layout and the <code>page.njk</code> layout.</p>
+<p><code>base.njk</code> includes the standard HTML boilerplate including meta and &quot;og&quot; tags in <code>&lt;head&gt;</code>.</p>
+<p><code>page.njk</code> includes the <code>sitenav.njk</code> partial.</p>
+<p><code>home.njk</code> includes a loop that will create &quot;cards&quot; for everything in <code>collections.pages</code>.</p>
+<h2 id="expected-frontmatter">Expected Frontmatter<a class="tdbc-anchor" href="#expected-frontmatter">#</a></h2>
+<p>There are only two fields expected:</p>
+<ul>
+<li><code>title</code> - essentially required, by default is used in the page <code>&lt;title&gt;</code>, in the layout &quot;hero&quot;, in social share preview images, and in social share meta tags.</li>
+<li><code>description</code> - optional, by default appears below the title for the <code>page</code> template and is used as for the &quot;description&quot; meta tag and social share meta tag descriptions.</li>
+</ul>
+<h2 id="permalink-style">Permalink Style<a class="tdbc-anchor" href="#permalink-style">#</a></h2>
+<p>The default setup expects content - using any template language - within <code>pages/</code>.</p>
+<p>The <code>pages.json</code> in that directory includes a <code>permalink</code> setting so that the file name is used directly to prevent 'pages' being the base of the URL.</p>
+<p>You can <a href="https://www.11ty.dev/docs/permalinks/">override permalinks per file</a>.</p>
+<h2 id="asset-handling">Asset Handling<a class="tdbc-anchor" href="#asset-handling">#</a></h2>
+<p>In the <code>.eleventy.js</code> config, there are included &quot;pass-throughs&quot; for an <code>img/</code> directory as well as <code>favicon.png</code>.</p>
+<p>You can replace the included favicon, and create an <code>img</code> directory or remove the <code>addPassthroughCopy</code> if you do not have need of images.</p>
+<p>Creating an <code>img</code> directory and keeping the pass-through directive will make images available at <code>/img/[image-file-path]</code> relative to the site root.</p>
+<h2 id="linting">Linting<a class="tdbc-anchor" href="#linting">#</a></h2>
+<p>For Sass, <a href="https://stylelint.io/">stylelint</a> is included. If you want to keep it, you may want to do a find/replace for <code>tdbc</code> to the prefix of your choice. If not, you'll want to remove the related files at the project root as well as the related items in the <code>package.json</code>.</p>
+<p>A <code>prettier</code> config is included, with the only update being <code>printWidth: 100</code>.</p>
+<h2 id="sass-framework">Sass Framework<a class="tdbc-anchor" href="#sass-framework">#</a></h2>
+<p>Review the <a href="https://5t3ph.github.io/html-sass-jumpstart/">styling documentation</a> for the included minimal Sass framework, particularly the theme variables, to quickly customize the starter.</p>
+<p>The only notable differences are:</p>
+<ol>
+<li><code>sitenav</code> - adjust the styles for the navigation header that appears on pages</li>
+<li><code>tdbc-anchor</code> - styles for the <code>#</code> anchor that appears next to page headings (<a href="#anchor-links">or turn that feature off</a>) can be adjusted in <code>sass/_utilities</code></li>
+<li>Additional <code>article</code>-scoped styling for typography as it appears on <code>pages</code></li>
+<li>A theme for the <a href="#prism-syntax-highlighting"><code>prism</code> syntax highlighting</a> for code blocks. You can adjust or replace the theme in <code>sass/_prism</code>.</li>
+</ol>
+<h3 id="fonts">Fonts<a class="tdbc-anchor" href="#fonts">#</a></h3>
+<p>The default font is <a href="https://fonts.google.com/specimen/Baloo+2">Baloo 2</a> and is locally hosted with files in <code>fonts/</code>. If you swap to a different font, be sure to remove the font files as well as the <code>@font-face</code> rules at the top of <code>sass/style.scss</code>, and update the <code>$tdbc-font-family</code> Sass variable.</p>
+<h2 id="anchor-links">Anchor Links<a class="tdbc-anchor" href="#anchor-links">#</a></h2>
+<p>Anchor links next to headings throughout Markdown content are generated by an add-on plugin for <code>markdownIt</code>.</p>
+<p>This feature can be adjusted or removed in the <code>.eleventy.js</code> config file.</p>
+<h2 id="generated-features">Generated Features<a class="tdbc-anchor" href="#generated-features">#</a></h2>
+<h3 id="sitemap">Sitemap<a class="tdbc-anchor" href="#sitemap">#</a></h3>
+<p>A <code>sitemap.xml</code> is generated from all available content.</p>
+<p>To exclude non-page or non-public content from the sitemap, include <code>eleventyExcludeFromCollections: true</code> in frontmatter, or <a href="https://www.11ty.dev/docs/collections/#advanced-custom-filtering-and-sorting">create a custom filter</a>.</p>
+<h3 id="rss-feed">RSS Feed<a class="tdbc-anchor" href="#rss-feed">#</a></h3>
+<p>An RSS feed is included, and output at <code>[siteurl]/feed/feed.xml</code>.</p>
+<p>If publishing from Netlify, the included <code>netlify.toml</code> file will create a redirect so that the feed becomes available at <code>[siteurl]/feed</code>.</p>
+<h3 id="social-share-preview-images">Social Share Preview Images<a class="tdbc-anchor" href="#social-share-preview-images">#</a></h3>
+<p>Upon use of the build command, social share preview images are generated for each page + the home page, and available in <code>public/previews/[title-as-slug].png</code>.</p>
+<p>Here's an example of the default template:</p>
+<p><img src="/previews/hello-world.png" alt="default social share preview image template"></p>
+<p>For technical details on how this is generated, <a href="https://dev.to/5t3ph/automated-social-sharing-images-with-puppeteer-11ty-and-netlify-22ln">review my article on DEV</a>.</p>
+<p>Any changes made can be previewed by running the build command and reviewing the contents of <code>public/previews/</code>.</p>
+<h4>Update template HTML</h4>
+<p>HTML can be changed in <code>_generate/social-previews.njk</code></p>
+<h4>Update template style</h4>
+<p>An isolated, slimmed down stylesheet is created for the template: <code>sass/social-previews.scss</code></p>
+<h4>Change included pages OR available data</h4>
+<p>Adjust the collections loop in <code>_generate/pagesjson.liquid</code></p>
+<h2 id="prism-syntax-highlighting">Prism Syntax Highlighting<a class="tdbc-anchor" href="#prism-syntax-highlighting">#</a></h2>
+<p>Syntax highlighting of inline or code blocks found within Markdown content is provided by Prism via <code>@11ty/eleventy-plugin-syntaxhighlight</code>.</p>
+<p>You can change the theme used in <code>sass/_prism.scss</code>.</p>
+<p>Or, remove teh plugin if you are not in need of code highlighting.</p>
+<h2 id="eleventyjs-config-features">.eleventy.js Config Features<a class="tdbc-anchor" href="#eleventyjs-config-features">#</a></h2>
+<h3 id="overrides">Overrides<a class="tdbc-anchor" href="#overrides">#</a></h3>
+<p><strong>Input directory</strong>: <code>src</code></p>
+<p><strong>Output directory</strong>: <code>public</code></p>
+<p>Also, <code>markdownLibrary</code> is extended to add the <code>markdownItAnchor</code> plugin for <a href="#anchor-links">anchor links</a>.</p>
+<h3 id="shortcode-year">Shortcode: <code>year</code><a class="tdbc-anchor" href="#shortcode-year">#</a></h3>
+<p>Returns the current <code>YYYY</code> year, used by the footer copyright.</p>
+<h3 id="filter-slug">Filter: <code>slug</code><a class="tdbc-anchor" href="#filter-slug">#</a></h3>
+<p>Extends the default slug function to also:</p>
+<ul>
+<li>remove emojis</li>
+<li>expand list of characters to remove</li>
+</ul>
+<h3 id="filter-jsontitle">Filter: <code>jsonTitle</code><a class="tdbc-anchor" href="#filter-jsontitle">#</a></h3>
+<p>Used in <code>_generate/pagesjson.liquid</code> to ensure titles are escaped, and also applies non-breaking spaces to the last three words to prevent orphans in preview images.</p>
+<h2 id="vscode-tips">VSCode Tips<a class="tdbc-anchor" href="#vscode-tips">#</a></h2>
+<h3 id="nunjucks">Nunjucks<a class="tdbc-anchor" href="#nunjucks">#</a></h3>
+<p>If you haven't previously worked with Nunjucks, you will want a syntax highlighting extension: <a href="https://marketplace.visualstudio.com/items?itemName=ronnidc.nunjucks">Nunjucks</a></p>
+<p>In addition, you may want to ensure Emmet works on <code>.njk</code> files by updating/adding the following in the <code>settigs.json</code>:</p>
+<pre class="language-json"><code class="language-json"><span class="token property">"emmet.includeLanguages"</span><span class="token operator">:</span> <span class="token punctuation">{</span><br>	<span class="token property">"nunjucks"</span><span class="token operator">:</span> <span class="token string">"html"</span><span class="token punctuation">,</span><br><span class="token punctuation">}</span><span class="token punctuation">,</span></code></pre>
+<h3 id="formatting">Formatting<a class="tdbc-anchor" href="#formatting">#</a></h3>
+<p>As noted previously, a <code>prettier</code> config is included, and you may want to get the
+Prettier extension and update your VSCode settings to &quot;Format on Save&quot;.</p>
+<p>However, to format template files Prettier doesn't recognize like <code>.njk</code>, you can update the &quot;Language Mode&quot; on the currently open file fron &quot;Nunjuck&quot; (or other current templating language) to &quot;HTML&quot; to allow formatting to be
+applied. Then, flip it back to re-allow the syntax highlighting if needed.</p>
+<p>This is located in the VSCode bottom toolbar near the right-hand side and will display the value of the current file's
+detected language. Click the name to open the selector.</p>
+
+  </article>
+</main>
+
+
+    <footer class="tdbc-background--secondary">
+      <div class="tdbc-container tdbc-text-align-center">
+        <div class="tdbc-row tdbc-ink--light tdbc-mx-auto">
+          <p class="tdbc-mb-none">&copy; 2020 The Bubbleworks</p>
+          <span class="tdbc-row tdbc-row--center-content">
+            <a
+              href="https://twitter.com/The_Bubbleworks/"
+              class="tdbc-icon-button tdbc-ink--light"
+              aria-label="Twitter"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 28" aria-hidden="true" focusable="false">
+                <path
+                  d="M25.312 6.375c-0.688 1-1.547 1.891-2.531 2.609 0.016 0.219 0.016 0.438 0.016 0.656 0 6.672-5.078 14.359-14.359 14.359-2.859 0-5.516-0.828-7.75-2.266 0.406 0.047 0.797 0.063 1.219 0.063 2.359 0 4.531-0.797 6.266-2.156-2.219-0.047-4.078-1.5-4.719-3.5 0.313 0.047 0.625 0.078 0.953 0.078 0.453 0 0.906-0.063 1.328-0.172-2.312-0.469-4.047-2.5-4.047-4.953v-0.063c0.672 0.375 1.453 0.609 2.281 0.641-1.359-0.906-2.25-2.453-2.25-4.203 0-0.938 0.25-1.797 0.688-2.547 2.484 3.062 6.219 5.063 10.406 5.281-0.078-0.375-0.125-0.766-0.125-1.156 0-2.781 2.25-5.047 5.047-5.047 1.453 0 2.766 0.609 3.687 1.594 1.141-0.219 2.234-0.641 3.203-1.219-0.375 1.172-1.172 2.156-2.219 2.781 1.016-0.109 2-0.391 2.906-0.781z"
+                ></path>
+              </svg>
+            </a>
+          </span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
