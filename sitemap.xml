@@ -4,7 +4,7 @@
   <url>
     <loc>/</loc>
 		
-    <lastmod>2020-06-03T17:43:35.585+01:00</lastmod>
+    <lastmod>2020-06-11T08:25:23.738+01:00</lastmod>
     
   </url>
   
@@ -19,6 +19,13 @@
     <loc>/helloworld/</loc>
 		
     <lastmod>2020-06-03T17:43:35.585+01:00</lastmod>
+		
+  </url>
+  
+  <url>
+    <loc>/404.html</loc>
+		
+    <lastmod>2020-06-11T08:25:23.738+01:00</lastmod>
 		
   </url>
 </urlset>
